@@ -1,4 +1,9 @@
-//! Shared foundational types (ChunkPos) for the Oxidized MC ecosystem
+//! Shared coordinate types for the Oxidized workspace.
+//!
+//! This crate provides fundamental spatial types (`ChunkPos`) that are needed
+//! by multiple crates (protocol, world, game) without introducing circular
+//! dependencies.
 
-#![warn(missing_docs)]
-#![deny(unsafe_code)]
+mod chunk_pos;
+
+pub use chunk_pos::ChunkPos;
